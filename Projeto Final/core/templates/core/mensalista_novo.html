@@ -1,0 +1,15 @@
+<h2>Lista Movimentos Rotativos</h2>
+
+<ul>
+{% for mov_mensalista in mensalistas %}
+    <li> {{ mov_mensalista.veiculo }} - {{ mov_mensalista.inicio }} </li>
+{% endfor %}
+</ul>
+
+<form action="{% url 'core_mensalista_novo' %}" method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Cadastrar</button>
+</form>

@@ -1,0 +1,5 @@
+venv
+.D5_Store
+.idea
+*.sqlite3
+*pyc

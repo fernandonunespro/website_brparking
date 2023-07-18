@@ -1,0 +1,14 @@
+<h2>Updating Veiculo: {{ veiculo }}</h2>
+
+<form action="{% url 'core_veiculo_update' veiculo.id %}" method="POST">
+  {% csrf_token %}
+  {{ form.marca.label_tag }} {{ form.marca }}<br>
+  {{ form.placa.label_tag }} {{ form.placa }}<br>
+  {{ form.proprietario.label_tag }} {{ form.proprietario }}<br>
+  {{ form.cor.label_tag }} {{ form.cor }}<br>
+  {{ form.observacoes.label_tag }} {{ form.observacoes }}<br>
+
+  <button type="submit">Salvar</button>
+</form>
+
+<a href="{% url 'core_veiculo_delete' veiculo.id %}">Deletar</a>

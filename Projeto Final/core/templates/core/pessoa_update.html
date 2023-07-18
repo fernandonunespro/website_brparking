@@ -1,0 +1,24 @@
+<h2>Updating Pessoa: {{ pessoa }}</h2>
+
+<form action="{% url 'core_pessoa_update' pessoa.id %}" method="POST">
+  {% csrf_token %}
+
+  <div>
+    {{ form.nome.label_tag }}<br>
+    {{ form.nome }}
+  </div>
+
+  <div>
+    {{ form.endereco.label_tag }}<br>
+    {{ form.endereco }}
+  </div>
+
+  <div>
+    {{ form.telefone.label_tag }}<br>
+    {{ form.telefone }}
+  </div>
+
+  <button type="submit">Salvar</button>
+</form>
+
+<a href="{% url 'core_pessoa_delete' pessoa.id %}">Deletar</a>

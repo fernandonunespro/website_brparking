@@ -1,0 +1,33 @@
+<h2>Updating Movimentos Rotativos</h2>
+<ul>
+  {% for mov_rotativo in mov_rot %}
+    <li>
+      <a href="{% url 'core_movrotativos_update' mov_rotativo.id %}">
+        {{ mov_rotativo.checkin }} - {{ mov_rotativo.veiculo.placa }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+<form action="{% url 'core_movrotativos_update' mov_rotativo.id %}" method="POST">
+  {% csrf_token %}
+
+  {{ form.checkin.label_tag }}<br>
+  {{ form.checkin }}<br>
+
+  {{ form.checkout.label_tag }}<br>
+  {{ form.checkout }}<br>
+
+  {{ form.valor_hora.label_tag }}<br>
+  {{ form.valor_hora }}<br>
+
+  {{ form.veiculo.label_tag }}<br>
+  {{ form.veiculo }}<br>
+
+  {{ form.pago.label_tag }}<br>
+  {{ form.pago }}<br>
+
+  <button type="submit">Cadastrar</button>
+</form>
+
+<a href="{% url 'core_movrotativos_delete' mov_rotativo.id %}">Deletar</a>

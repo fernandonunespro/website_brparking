@@ -1,0 +1,16 @@
+<h2>Lista Movimentos Rotativos</h2>
+
+{% if mov_mensalista %}
+    <p>Elemento cadastrado:</p>
+    <p>Mensalista: {{ mov_mensalista.mensalista }}</p>
+    <p>Dt pgto: {{ mov_mensalista.dt_pgto }}</p>
+    <p>Total: {{ mov_mensalista.total }}</p>
+    <!-- Exibir outros detalhes do mov_mensalista -->
+{% endif %}
+
+<!-- Exibir o formulário de cadastro -->
+<form method="post" action="{% url 'core_movmensalista_novo' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Cadastrar</button>
+</form>
