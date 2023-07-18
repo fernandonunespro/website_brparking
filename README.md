@@ -5,17 +5,17 @@ This is a project developed for a car parking with a login system for employees.
 </p>
 
 <p align="center">
-  <a href="#-tecnology">Tecnology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnology">Tecnology</a>
 </p>
 
 <p align="center">
-  <img alt="WebSite Screenshot" src="/Img/BrParkingSite.png">
+  <img alt="WebSite Screenshot" src="/website-brparking/Img/BrParkingSite.png">
 </p>
 
 <br>
 
 <p align="center">
-  <img alt="Django Admin" src="/Img/djangoAdmin.png" width="100%">
+  <img alt="Django Admin" src="./website-brparking/Img/djangoAdmin.png" width="100%">
 </p>
 
 ## 🚀 Tecnology
