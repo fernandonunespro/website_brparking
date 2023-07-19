@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
 <h2>Updating Movimentos Rotativos</h2>
 <ul>
   {% for mov_rotativo in mov_rot %}
@@ -31,3 +35,5 @@
 </form>
 
 <a href="{% url 'core_movrotativos_delete' mov_rotativo.id %}">Deletar</a>
+
+{% endblock %}

@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
 <h2>Lista Movimentos Rotativos</h2>
 <ul>
   {% for mov_rotativo in mov_rot %}
@@ -16,3 +20,5 @@
 
     <button type="submit">Cadastrar</button>
 </form>
+
+{% endblock %}
